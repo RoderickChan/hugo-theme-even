@@ -14,6 +14,18 @@
   {{ partial "head.html" . }}
 </head>
 <body>
+
+  {{ with .Site.Params.githubForkUrl }}
+	  <!-- fork me on github --->
+	  <!-- see https://github.blog/2008-12-19-github-ribbons/ -->
+	  <a href="{{ . }}" title="{{ . }}" target="_blank">  
+	  <img style="position: fixed; top: 0; right: 0; border: 0; z-index:9999;" 
+		 src="/img/follow_me_on_github.png" 
+		 alt="Fork me on GitHub">
+	  </a>
+  {{ end }}
+
+
   {{ partial "slideout.html" . }}
   <div class="container" id="mobile-panel">
     {{ if not .Params.hideHeaderAndFooter -}}
@@ -37,7 +49,7 @@
     </footer>
     {{- end }}
 
-    <div class="back-to-top" id="back-to-top">
+    <div class="back-to-top" id="back-to-top" title="回到顶部">
       <i class="iconfont icon-up"></i>
     </div>
   </div>
