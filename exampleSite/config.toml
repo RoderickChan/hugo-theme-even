@@ -152,6 +152,14 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     clientId = ""           # Your client ID
     clientSecret = ""       # Your client secret
 
+  [params.giscus]           # https://giscus.app/
+    repo = ""
+    repoId = ""
+    category = ""
+    categoryId = ""
+    theme = "light"
+    lang = "zh-CN"
+
   # Valine.
   # You can get your appid and appkey from https://leancloud.cn
   # more info please open https://valine.js.org
