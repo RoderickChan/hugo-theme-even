@@ -159,6 +159,9 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     categoryId = ""
     theme = "light"
     lang = "zh-CN"
+  
+  [params.revolvermaps]
+    enable = true
 
   # Valine.
   # You can get your appid and appkey from https://leancloud.cn
