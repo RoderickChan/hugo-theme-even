@@ -34,14 +34,17 @@
     </header>
     {{- end }}
 
+    {{ block "main" . }}
     <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          {{ block "content" . }}{{ end }}
+        <div class="content-wrapper">
+            <div id="content" class="content">
+                {{ block "content" . }}{{ end }}
+            </div>
+            {{ partial "comments.html" . }}
         </div>
-        {{ partial "comments.html" . }}
-      </div>
     </main>
+  {{ end }}
+
 
     {{ if not .Params.hideHeaderAndFooter -}}
     <footer id="footer" class="footer">
